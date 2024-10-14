@@ -1,0 +1,30 @@
+services:
+  fastapi-app:
+    build: .
+    container_name: fastapi-app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo
+    env_file:
+      - ./app/.env
+    networks:
+      - fastapi-network
+
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    ports:
+      - "27016:27017"
+    volumes:
+      - mongo_data:/data/db
+    env_file:
+      - ./app/.env
+    networks:
+      - fastapi-network
+
+networks:
+  fastapi-network:
+
+volumes:
+  mongo_data:

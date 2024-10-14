@@ -1,0 +1,36 @@
+{
+  "destination": [
+    {
+      "destinationName": "destination1",
+      "transport": "http.post",
+      "url": "https://example.com/destination1"
+    },
+    {
+      "destinationName": "destination2",
+      "transport": "http.post",
+      "url": "https://example2.com/destination2"
+    },
+    {
+      "destinationName": "destination3",
+      "transport": "log.info"
+    },
+    {
+      "destinationName": "destination4",
+      "transport": "log.warn"
+    }
+  ],
+  "strategy": [
+    {
+      "name": "ALL",
+      "is_default": true
+    },
+    {
+      "name": "IMPORTANT",
+      "is_default": false
+    },
+    {
+      "name": "SMALL",
+      "is_default": false
+    }
+  ]
+}
