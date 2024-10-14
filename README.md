@@ -3,7 +3,7 @@
 1. Clone the repository:
     ```bash
     git clone git@github.com:DanyloSolohub/FastApi-Mongo.git
-    cd your-repository
+    cd FastApi-Mongo
     ```
 
 2. Make sure the `.env` file is located in the `app` folder. For example:
